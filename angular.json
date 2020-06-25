@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ourTravelBlog"
+    }
+  },
+  "defaultProject": "ourTravelBlog",
+  "cli": {
+    "analytics": false
+  }
 }
