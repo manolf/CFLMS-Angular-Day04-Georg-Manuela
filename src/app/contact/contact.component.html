@@ -1,1 +1,61 @@
-<p>contact works!</p>
+<h2>Please contact us!</h2>
+
+<form [formGroup]="info" (ngSubmit)="onSubmit()">
+    <label>
+      First Name:
+      <input type="text" formControlName="firstName" pattern="[a-zA-Z ]*">
+      <div *ngIf="info.get('firstName').errors.required && submitted">
+        Name required
+     </div>
+     <div *ngIf="info.get('firstName').errors.minlength && submitted">
+       Name must be at least 4 characters long.
+     </div>
+     <!-- <div *ngIf="info.get('firstName').errors.pattern && submitted">
+       Name must be a string.
+     </div> -->
+    </label>
+
+   <br>
+<label>
+  Last Name:
+  <input type="text" formControlName="lastName" pattern="[a-zA-Z ]*">
+  <div *ngIf="info.get('lastName').errors.required && submitted">
+   LastName is required.
+ </div>
+ <!-- <div *ngIf="info.get('lastName').errors.minlength && submitted">
+  LastName must be at least 4 characters long.
+ </div> -->
+ <!-- <div *ngIf="info.get('lastName').errors.pattern && submitted">
+  LastName must be a string.
+ </div> -->
+  </label>
+
+
+
+  <label>
+    Destination:
+    <input type="text" formControlName="destination" pattern="[a-zA-Z ]*">
+    <div *ngIf="info.get('destination').errors.required && submitted">
+      Destination is required.
+   </div>
+  
+   <div *ngIf="info.get('destination').errors.pattern && submitted">
+    Destination must be a string.
+   </div>
+    </label>
+
+    <label>
+      Email:
+      <input type="text" formControlName="email" pattern="[a-zA-Z ]*">
+      <div *ngIf="info.get('email').errors.required && submitted">
+      Input is required.
+     </div>
+     <div *ngIf="info.get('email').errors.minlength && submitted">
+      Input must be at least 4 characters long.
+    </div>
+
+    </label>
+
+ <input type="submit" class="btn btn-primary" value="Submit">
+   </form>
+   <!-- <p id="test"> Hier sollte output stehen</p> -->
