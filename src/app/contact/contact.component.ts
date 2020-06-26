@@ -28,6 +28,8 @@ export class ContactComponent implements OnInit {
     if(this.info.valid){
     var a = this.info.value;
       console.log(a)
+      this.info.reset();
+      this.submitted= false;
     }
     }
 

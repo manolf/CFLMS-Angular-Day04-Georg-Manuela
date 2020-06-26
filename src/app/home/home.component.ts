@@ -11,8 +11,7 @@ export class HomeComponent implements OnInit {
 
    name : string = "";
    text : string = "";
-   date : Date;
-   time : Time; 
+    
 
   // model : string = "";
   // ps: number;
